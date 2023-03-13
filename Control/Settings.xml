@@ -39,7 +39,7 @@
   <Boot.x64.IncludeMassStorageDrivers>True</Boot.x64.IncludeMassStorageDrivers>
   <Boot.x64.IncludeVideoDrivers>False</Boot.x64.IncludeVideoDrivers>
   <Boot.x64.IncludeSystemDrivers>False</Boot.x64.IncludeSystemDrivers>
-  <Boot.x64.BackgroundFile>%INSTALLDIR%\Samples\Background.bmp</Boot.x64.BackgroundFile>
+  <Boot.x64.BackgroundFile>C:\MDT-Windows-Deployment\MDT-Windows-Deployment\Resources\anime-cute-school-girl-p2-1920x1080.bmp</Boot.x64.BackgroundFile>
   <Boot.x64.ExtraDirectory>
   </Boot.x64.ExtraDirectory>
   <Boot.x64.GenerateGenericWIM>False</Boot.x64.GenerateGenericWIM>
@@ -47,7 +47,7 @@
   <Boot.x64.GenericWIMDescription>Generic Windows PE (x64)</Boot.x64.GenericWIMDescription>
   <Boot.x64.GenericISOName>Generic_x64.iso</Boot.x64.GenericISOName>
   <Boot.x64.GenerateLiteTouchISO>True</Boot.x64.GenerateLiteTouchISO>
-  <Boot.x64.LiteTouchWIMDescription>Lite Touch Windows PE (x64)</Boot.x64.LiteTouchWIMDescription>
+  <Boot.x64.LiteTouchWIMDescription>Windows 10 Deployment MDT</Boot.x64.LiteTouchWIMDescription>
   <Boot.x64.LiteTouchISOName>LiteTouchPE_x64.iso</Boot.x64.LiteTouchISOName>
   <Boot.x64.SelectionProfile>All Drivers and Packages</Boot.x64.SelectionProfile>
   <Boot.x64.SupportUEFI>True</Boot.x64.SupportUEFI>
