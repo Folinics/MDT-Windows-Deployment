@@ -34,7 +34,7 @@
   <Boot.x86.FeaturePacks>winpe-mdac</Boot.x86.FeaturePacks>
   <Boot.x64.UseBootWim>True</Boot.x64.UseBootWim>
   <Boot.x64.ScratchSpace>32</Boot.x64.ScratchSpace>
-  <Boot.x64.IncludeAllDrivers>False</Boot.x64.IncludeAllDrivers>
+  <Boot.x64.IncludeAllDrivers>True</Boot.x64.IncludeAllDrivers>
   <Boot.x64.IncludeNetworkDrivers>True</Boot.x64.IncludeNetworkDrivers>
   <Boot.x64.IncludeMassStorageDrivers>True</Boot.x64.IncludeMassStorageDrivers>
   <Boot.x64.IncludeVideoDrivers>False</Boot.x64.IncludeVideoDrivers>
