@@ -18,7 +18,7 @@
   <Boot.x86.IncludeNetworkDrivers>True</Boot.x86.IncludeNetworkDrivers>
   <Boot.x86.IncludeMassStorageDrivers>True</Boot.x86.IncludeMassStorageDrivers>
   <Boot.x86.IncludeVideoDrivers>False</Boot.x86.IncludeVideoDrivers>
-  <Boot.x86.IncludeSystemDrivers>False</Boot.x86.IncludeSystemDrivers>
+  <Boot.x86.IncludeSystemDrivers>True</Boot.x86.IncludeSystemDrivers>
   <Boot.x86.BackgroundFile>%INSTALLDIR%\Samples\Background.bmp</Boot.x86.BackgroundFile>
   <Boot.x86.ExtraDirectory>
   </Boot.x86.ExtraDirectory>
@@ -34,11 +34,11 @@
   <Boot.x86.FeaturePacks>winpe-mdac</Boot.x86.FeaturePacks>
   <Boot.x64.UseBootWim>True</Boot.x64.UseBootWim>
   <Boot.x64.ScratchSpace>32</Boot.x64.ScratchSpace>
-  <Boot.x64.IncludeAllDrivers>True</Boot.x64.IncludeAllDrivers>
+  <Boot.x64.IncludeAllDrivers>False</Boot.x64.IncludeAllDrivers>
   <Boot.x64.IncludeNetworkDrivers>True</Boot.x64.IncludeNetworkDrivers>
   <Boot.x64.IncludeMassStorageDrivers>True</Boot.x64.IncludeMassStorageDrivers>
   <Boot.x64.IncludeVideoDrivers>False</Boot.x64.IncludeVideoDrivers>
-  <Boot.x64.IncludeSystemDrivers>False</Boot.x64.IncludeSystemDrivers>
+  <Boot.x64.IncludeSystemDrivers>True</Boot.x64.IncludeSystemDrivers>
   <Boot.x64.BackgroundFile>C:\MDT-Windows-Deployment\MDT-Windows-Deployment\Resources\anime-cute-school-girl-p2-1920x1080.bmp</Boot.x64.BackgroundFile>
   <Boot.x64.ExtraDirectory>
   </Boot.x64.ExtraDirectory>

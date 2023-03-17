@@ -216,13 +216,13 @@
           <variable name="OSDPartitions0Size" property="Partitions0Size">499</variable>
           <variable name="OSDPartitions0SizeUnits" property="Partitions0SizeUnits">MB</variable>
           <variable name="OSDPartitions0VolumeLetterVariable" property="Partitions0VolumeLetterVariable"></variable>
-          <variable name="OSDPartitions1VolumeName" property="Partitions1VolumeName">Windows</variable>
           <variable name="OSDPartitions1Type" property="Partitions1Type">Primary</variable>
           <variable name="OSDPartitions1FileSystem" property="Partitions1FileSystem">NTFS</variable>
-          <variable name="OSDPartitions1Size" property="Partitions1Size">99</variable>
-          <variable name="OSDPartitions1SizeUnits" property="Partitions1SizeUnits">%</variable>
           <variable name="OSDPartitions1Bootable" property="Partitions1Bootable">False</variable>
           <variable name="OSDPartitions1QuickFormat" property="Partitions1QuickFormat">True</variable>
+          <variable name="OSDPartitions1VolumeName" property="Partitions1VolumeName">Windows</variable>
+          <variable name="OSDPartitions1Size" property="Partitions1Size">99</variable>
+          <variable name="OSDPartitions1SizeUnits" property="Partitions1SizeUnits">%</variable>
           <variable name="OSDPartitions1VolumeLetterVariable" property="Partitions1VolumeLetterVariable">Windows</variable>
           <variable name="OSDPartitions2Type" property="Partitions2Type">Recovery</variable>
           <variable name="OSDPartitions2FileSystem" property="Partitions2FileSystem">NTFS</variable>
@@ -265,13 +265,13 @@
           <variable name="OSDPartitions1Size" property="Partitions1Size">128</variable>
           <variable name="OSDPartitions1SizeUnits" property="Partitions1SizeUnits">MB</variable>
           <variable name="OSDPartitions1VolumeLetterVariable" property="Partitions1VolumeLetterVariable"></variable>
-          <variable name="OSDPartitions2VolumeName" property="Partitions2VolumeName">Windows</variable>
           <variable name="OSDPartitions2Type" property="Partitions2Type">Primary</variable>
           <variable name="OSDPartitions2FileSystem" property="Partitions2FileSystem">NTFS</variable>
-          <variable name="OSDPartitions2Size" property="Partitions2Size">99</variable>
-          <variable name="OSDPartitions2SizeUnits" property="Partitions2SizeUnits">%</variable>
           <variable name="OSDPartitions2Bootable" property="Partitions2Bootable">False</variable>
           <variable name="OSDPartitions2QuickFormat" property="Partitions2QuickFormat">True</variable>
+          <variable name="OSDPartitions2VolumeName" property="Partitions2VolumeName">Windows</variable>
+          <variable name="OSDPartitions2Size" property="Partitions2Size">99</variable>
+          <variable name="OSDPartitions2SizeUnits" property="Partitions2SizeUnits">%</variable>
           <variable name="OSDPartitions2VolumeLetterVariable" property="Partitions2VolumeLetterVariable">Windows</variable>
           <variable name="OSDPartitions3Type" property="Partitions3Type">Recovery</variable>
           <variable name="OSDPartitions3FileSystem" property="Partitions3FileSystem">NTFS</variable>
@@ -359,7 +359,7 @@
         <variable name="LoadProfile" property="LoadProfile">false</variable>
       </defaultVarList>
     </step>
-    <step type="BDD_InjectDrivers" name="Inject Drivers" description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
+    <step type="BDD_InjectDrivers" name="Injecting Drivers..." description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
       <defaultVarList>
         <variable name="DriverSelectionProfile" property="DriverSelectionProfile">All Drivers</variable>
         <variable name="DriverInjectionMode" property="DriverInjectionMode">AUTO</variable>
@@ -390,7 +390,7 @@
         <variable name="Value">INSTALL</variable>
       </expression>
     </condition>
-    <step type="BDD_InstallOS" name="Install Operating System" description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
+    <step type="BDD_InstallOS" name="Installing Windows 10 (22H2)..." description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
       <defaultVarList>
         <variable name="OSGUID" property="OSGUID">{71ea0335-6a0d-4657-8585-78798ab818c8}</variable>
         <variable name="DestinationDisk" property="DestinationDisk">0</variable>
@@ -438,7 +438,7 @@
         <variable name="LoadProfile" property="LoadProfile">false</variable>
       </defaultVarList>
     </step>
-    <step name="Inject Drivers" disable="false" continueOnError="false" successCodeList="0 3010" description="" startIn="">
+    <step name="Injecting Drivers..." disable="false" continueOnError="false" successCodeList="0 3010" description="" startIn="">
       <action>cscript.exe "%SCRIPTROOT%\ZTIdrivers.wsf"</action>
       <defaultVarList>
         <variable name="RunAsUser" property="RunAsUser">false</variable>
@@ -447,7 +447,7 @@
         <variable name="LoadProfile" property="LoadProfile">false</variable>
       </defaultVarList>
     </step>
-    <step type="BDD_InstallUpdatesOffline" name="Apply Patches" disable="false" continueOnError="false" successCodeList="0 3010" description="" startIn="">
+    <step type="BDD_InstallUpdatesOffline" name="Apply Patches" disable="true" continueOnError="false" successCodeList="0 3010" description="" startIn="">
       <action>cscript.exe "%SCRIPTROOT%\ZTIPatches.wsf"</action>
       <defaultVarList>
         <variable name="PackageSelectionProfile" property="PackageSelectionProfile">All Packages</variable>
@@ -471,7 +471,7 @@
         <variable name="LoadProfile" property="LoadProfile">false</variable>
       </defaultVarList>
     </step>
-    <step type="SMS_TaskSequence_RebootAction" name="Restart computer" description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
+    <step type="SMS_TaskSequence_RebootAction" name="Restarting computer..." description="" disable="false" continueOnError="false" runIn="WinPEandFullOS" successCodeList="0 3010">
       <defaultVarList>
         <variable name="Message" property="Message"></variable>
         <variable name="MessageTimeout" property="MessageTimeout">60</variable>
@@ -537,14 +537,14 @@
         <variable name="LoadProfile" property="LoadProfile">false</variable>
       </defaultVarList>
     </step>
-    <step type="BDD_InstallApplication" name="Install Applications" disable="false" continueOnError="false" successCodeList="0 3010" description="" startIn="">
+    <step type="BDD_InstallApplication" name="Install Applications" disable="true" continueOnError="false" successCodeList="0 3010" description="" startIn="">
       <action>cscript.exe "%SCRIPTROOT%\ZTIApplications.wsf"</action>
       <defaultVarList>
         <variable name="ApplicationGUID" property="ApplicationGUID"></variable>
         <variable name="ApplicationSuccessCodes" property="ApplicationSuccessCodes">0 3010</variable>
       </defaultVarList>
     </step>
-    <step name="Windows Update (Post-Application Installation)" disable="true" continueOnError="true" successCodeList="0 3010" description="" startIn="">
+    <step name="Windows Update (Post-Application Installation)" disable="false" continueOnError="true" successCodeList="0 3010" description="" startIn="">
       <action>cscript.exe "%SCRIPTROOT%\ZTIWindowsUpdate.wsf"</action>
       <defaultVarList>
         <variable name="RunAsUser" property="RunAsUser">false</variable>
@@ -554,7 +554,7 @@
       </defaultVarList>
     </step>
     <group name="Custom Tasks" disable="false" continueOnError="false" expand="true" description=""></group>
-    <step type="SMS_TaskSequence_EnableBitLockerAction" name="Enable BitLocker" continueOnError="true" successCodeList="0 3010" description="" startIn="">
+    <step type="SMS_TaskSequence_EnableBitLockerAction" name="Enable BitLocker" continueOnError="true" successCodeList="0 3010" description="" startIn="" disable="true">
       <action>cscript.exe "%SCRIPTROOT%\ZTIBde.wsf"</action>
       <condition>
         <expression type="SMS_TaskSequence_VariableConditionExpression">
